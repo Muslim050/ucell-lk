@@ -1,4 +1,3 @@
-import { ReactComponent as Present } from "src/assets/present.svg";
 import { ReactComponent as Plus } from "src/assets/Plus.svg";
 import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
 import { showModalPayment } from "src/core/store/modal/modal.slice";

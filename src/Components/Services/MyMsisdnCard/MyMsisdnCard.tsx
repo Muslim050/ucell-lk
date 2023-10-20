@@ -1,12 +1,9 @@
 import styles from "./MyMsisdnCard.module.scss";
-import { ReactComponent as Present } from "src/assets/present.svg";
 import { ReactComponent as Plus } from "src/assets/Plus.svg";
-import { useDispatch } from "react-redux";
-// import { showModalPayment } from 'src/core/store/modal/modal.slice';
 import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
 import { showModalPayment } from "src/core/store/modal/modal.slice";
 import FormatterView from "src/Components/UI/Formatter/FormatterView";
-import { fetchFIO, fetchInfo } from "src/core/store/info/info.thunks";
+import { fetchInfo } from "src/core/store/info/info.thunks";
 import React from "react";
 
 function MyMsisdnCard() {

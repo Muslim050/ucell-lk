@@ -1,10 +1,9 @@
 import { useAppSelector } from "src/core/utils/hooks/redux";
 import FormatterView from "src/Components/UI/Formatter/FormatterView";
-import React from "react";
 import styles from "./MsisdnCard.module.scss";
 
 function MsisdnCard_Balance() {
-  const { mainscreen, fio } = useAppSelector((state) => state.mainscreen);
+  const { mainscreen } = useAppSelector((state) => state.mainscreen);
   const balance = mainscreen?.balance;
 
   return (

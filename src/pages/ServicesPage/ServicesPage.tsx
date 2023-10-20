@@ -1,8 +1,6 @@
-// import CardTarifInfo from 'src/src/components/TariffPlan/CardTarifInfo';
 import { fetchFIO, fetchInfo } from "src/core/store/info/info.thunks";
 import { fetchServices } from "src/core/store/services/services.thunks";
 import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
-import MsisdnCard from "src/Components/Main/MsisdnCard/MsisdnCard";
 import ServicesCardInfo from "src/Components/Services/ServicesCardInfo";
 import React from "react";
 import styles from "./ServicesPage.module.scss";
@@ -11,7 +9,6 @@ import { Loader } from "src/Components/UI/Loader/Loader";
 import ConnectedServices from "src/Components/Services/ConnectedServices/ConnectedServices";
 import { ModalServicesDisabled } from "src/Components/UI/ModalUI/ModalServicesDisabled/ModalServicesDisabled";
 import { PopupModalWrapper } from "src/Components/UI/ModalUI/SuccessPopupModal/PopupModalWrapper";
-import ServicesCard from "src/Components/Services/ServicesCard";
 import MyMsisdnCard from "src/Components/Services/MyMsisdnCard/MyMsisdnCard";
 function ChangeServicesPage() {
   const dispatch = useAppDispatch();
@@ -21,9 +18,6 @@ function ChangeServicesPage() {
   const [activeCategory, setActiveCategory] = React.useState<string | null>(
     null
   );
-  const [enabledServices, setEnabledServices] = React.useState(null);
-  const [showConnectedServices, setShowConnectedServices] =
-    React.useState(false);
 
   React.useEffect(() => {
     dispatch(fetchServices()).then(() => setLoading(false));
@@ -34,10 +28,6 @@ function ChangeServicesPage() {
   const handleTabClick = (tab: any) => {
     setActiveTab(tab);
     setActiveCategory(tab === "all" ? null : tab);
-  };
-  const handleShowDetails = (services: any) => {
-    setEnabledServices(services);
-    // Здесь вы можете выполнить любую другую логику, если необходимо
   };
 
   return (

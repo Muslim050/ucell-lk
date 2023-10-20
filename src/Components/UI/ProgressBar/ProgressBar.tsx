@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import styles from './ProgressBar.module.scss';
-import { ReactComponent as Unlim } from '@assets/PersonalArea/unlim.svg';
+import React, { useEffect, useState } from "react";
+import styles from "./ProgressBar.module.scss";
 
 interface ProgressBarProps {
   liveAmount?: string;
@@ -11,13 +10,13 @@ interface ProgressBarProps {
 const ProgressBar: React.FC<ProgressBarProps> = ({
   liveAmount,
   initialAmount,
-  color
+  color,
 }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const liveAmountAsNumber = parseFloat(liveAmount || '0');
-    const initialAmountAsNumber = parseFloat(initialAmount || '1');
+    const liveAmountAsNumber = parseFloat(liveAmount || "0");
+    const initialAmountAsNumber = parseFloat(initialAmount || "1");
 
     const timeout = setTimeout(() => {
       const newProgress = Math.round(
@@ -48,7 +47,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
           style={{
             width: `${progress}%`,
             backgroundColor: color,
-            transition: 'width 0.5s ease'
+            transition: "width 0.5s ease",
           }}
         />
       </div>

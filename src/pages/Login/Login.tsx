@@ -1,14 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthTypes } from "src/core/models/auth.interface";
-import { fetchAuth, fetchOTP } from "src/core/store/auth/auth.thunks";
-import { useAppDispatch } from "src/core/utils/hooks/redux";
 import Logo from "src/assets/LoginPage/Logo.png";
 import Location from "src/assets/LoginPage/Location.png";
 import Check from "src/assets/LoginPage/Check.png";
 import Alarm from "src/assets/LoginPage/Alarm.png";
 import Setting from "src/assets/LoginPage/Setting.png";
-
 import styles from "./Login.module.scss";
 import { useTranslation } from "react-i18next";
 import OtpInput from "react-otp-input";
@@ -20,10 +17,8 @@ function Login() {
   const [msisdn, setMsisdn] = React.useState<AuthTypes["msisdn"]>("");
   const [code, setCode] = React.useState("");
   const [selectedTab, setSelectedTab] = React.useState("ussd");
-  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const [inputValue, setInputValue] = React.useState("");
   const [otpRequested, setOtpRequested] = React.useState(false);
   const [error, setError] = React.useState("");
 
@@ -72,9 +67,6 @@ function Login() {
       console.log(error);
       setError("Введите номер правильно"); // Set the error message
     }
-  };
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
   };
 
   return (
@@ -176,7 +168,7 @@ function Login() {
                 )}
 
                 <div className={styles.login_links}>
-                  <a href="" className={styles.login_link}>
+                  <a href="/" className={styles.login_link}>
                     Вернуться на сайт
                   </a>
                 </div>
@@ -210,10 +202,10 @@ function Login() {
                 </div>
 
                 <div className={styles.login_links}>
-                  <a href="" className={styles.login_link}>
+                  <a href="/" className={styles.login_link}>
                     Забыли постоянный пароль?
                   </a>
-                  <a href="" className={styles.login_link}>
+                  <a href="/" className={styles.login_link}>
                     Зарегистрировать постоянный пароль
                   </a>
                 </div>
@@ -226,7 +218,7 @@ function Login() {
                 </button>
 
                 <div className={styles.login_links}>
-                  <a href="" className={styles.login_link}>
+                  <a href="/" className={styles.login_link}>
                     Вернуться на сайт
                   </a>
                 </div>

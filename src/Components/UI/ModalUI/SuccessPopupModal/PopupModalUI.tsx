@@ -1,10 +1,8 @@
-import React, { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./SuccessPopupModal.module.scss";
 import { useDispatch } from "react-redux";
 import { hidePopUpModal } from "src/core/store/modal/modal.slice";
-import { ReactComponent as Close } from "../../../../assets/Close.svg";
-import { useAppSelector } from "src/core/utils/hooks/redux";
 
 interface ModalUIProps {
   children: ReactNode;
@@ -50,7 +48,7 @@ export const PopupModalUI = ({ children }: ModalUIProps) => {
       dispatch(hidePopUpModal());
     }, 5000);
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [dispatch]);
   return (
     <motion.div
       className={styles.modal}

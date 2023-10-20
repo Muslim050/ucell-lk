@@ -1,6 +1,5 @@
 import { ReactComponent as Close } from "src/assets/Close.svg";
 import { AnimatePresence } from "framer-motion";
-// import "react-datepicker/dist/react-datepicker.css";
 import "react-day-picker/dist/style.css";
 import { ru } from "date-fns/locale";
 import styles from "../ModalUI.module.scss";
@@ -41,22 +40,14 @@ const css = `
   }
 `;
 
-const fixedSum = [
-  { id: 1, count: "30 000" },
-  { id: 2, count: "40 000" },
-  { id: 3, count: "50 000" },
-];
-
 const pastMonth = new Date();
 
 export const ModalDetailing = () => {
   const dispatch = useAppDispatch();
   const { showDetailing } = useAppSelector((state) => state.modal);
-  const { mainscreen } = useAppSelector((state) => state.mainscreen);
-  const { getExpRep, expensive } = useAppSelector((state) => state.expenses);
+  const { getExpRep } = useAppSelector((state) => state.expenses);
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
-  const msisdn = mainscreen?.msisdn.msisdn;
   const defaultSelected: DateRange = {
     from: pastMonth,
     to: addDays(pastMonth, 0),
@@ -133,8 +124,7 @@ export const ModalDetailing = () => {
   React.useEffect(() => {
     dispatch(getExpensesReport());
   }, []);
-
-  const currentDate = new Date(); // Replace this with your current date logic
+  const currentDate = new Date();
 
   const isDateDisabled = (date: Date) => {
     return date > currentDate;

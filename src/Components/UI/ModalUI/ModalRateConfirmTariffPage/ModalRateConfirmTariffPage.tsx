@@ -4,7 +4,6 @@ import styles from "../ModalUI.module.scss";
 import style from "./ModalRateConfirmTariffPage.module.scss";
 import { ModalUI } from "../ModalUI";
 import {
-  hideModalRateConfirm,
   hideModalRateConfirmation,
   showPopUpModal,
 } from "src/core/store/modal/modal.slice";
@@ -14,7 +13,7 @@ import React from "react";
 
 const ModalRateConfirmTariffPage = () => {
   const dispatch = useAppDispatch();
-  const { showRateConfirmation, infoRate, rateId } = useAppSelector(
+  const { showRateConfirmation, rateId } = useAppSelector(
     (state) => state.modal
   );
   const { detailRate } = useAppSelector((state) => state.rate);
@@ -42,7 +41,7 @@ const ModalRateConfirmTariffPage = () => {
     if (showRateConfirmation) {
       dispatch(fetchDetailRate({ rateId }));
     }
-  }, [dispatch, rateId]);
+  }, [dispatch, rateId, showRateConfirmation]);
 
   // React.useEffect(() => {
   //   if (rateId !== null) {

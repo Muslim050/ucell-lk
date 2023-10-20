@@ -58,7 +58,7 @@ export const changeServices = createAsyncThunk(
 
     const token = localStorage.getItem("token");
     try {
-      const response = await axios.post(
+      await axios.post(
         "/api/v1.5/services/change",
         {
           service_id: id,

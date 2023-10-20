@@ -13,7 +13,6 @@ import {
 } from "src/core/store/modal/modal.slice";
 import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
 import { changeRate } from "src/core/store/rate/rate.thunks";
-import React from "react";
 
 const ModalRateСonfirmation = () => {
   const dispatch = useAppDispatch();
@@ -107,59 +106,61 @@ const ModalRateСonfirmation = () => {
                   </li>
 
                   {infoRate &&
-                    infoRate.included_traffic.map((item, index) => (
-                      <li
-                        key={index}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          paddingBottom: "15px",
-                          marginTop: "16px",
-                        }}
-                      >
-                        <div
+                    infoRate.included_traffic.map(
+                      (item: any, index: string) => (
+                        <li
+                          key={index}
                           style={{
-                            fontWeight: "400",
-                            fontSize: "15px",
-                            lineHeight: "18px",
+                            display: "flex",
+                            alignItems: "center",
+                            paddingBottom: "15px",
+                            marginTop: "16px",
                           }}
                         >
-                          <img
-                            style={{ width: "40px" }}
-                            src={item.icon}
-                            alt=""
-                          />
-                        </div>
-
-                        <div
-                          style={{
-                            marginLeft: "15px",
-                          }}
-                        >
-                          <span
-                            style={{
-                              fontWeight: "600",
-                              fontSize: "20px",
-                              lineHeight: "14px",
-                              color: "#000",
-                            }}
-                          >
-                            {item.amount.text}
-                          </span>
                           <div
                             style={{
                               fontWeight: "400",
                               fontSize: "15px",
-                              lineHeight: "14px",
-                              color: "#555",
-                              // width: '120px'
+                              lineHeight: "18px",
                             }}
                           >
-                            {item.item_name}
+                            <img
+                              style={{ width: "40px" }}
+                              src={item.icon}
+                              alt=""
+                            />
                           </div>
-                        </div>
-                      </li>
-                    ))}
+
+                          <div
+                            style={{
+                              marginLeft: "15px",
+                            }}
+                          >
+                            <span
+                              style={{
+                                fontWeight: "600",
+                                fontSize: "20px",
+                                lineHeight: "14px",
+                                color: "#000",
+                              }}
+                            >
+                              {item.amount.text}
+                            </span>
+                            <div
+                              style={{
+                                fontWeight: "400",
+                                fontSize: "15px",
+                                lineHeight: "14px",
+                                color: "#555",
+                                // width: '120px'
+                              }}
+                            >
+                              {item.item_name}
+                            </div>
+                          </div>
+                        </li>
+                      )
+                    )}
                   <li
                     style={{
                       alignItems: "center",
@@ -228,34 +229,36 @@ const ModalRateСonfirmation = () => {
                     </li>
 
                     {infoRate &&
-                      infoRate.advantages.advantage_items.map((item, index) => (
-                        <li
-                          key={index}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            borderBottom: "1px solid #EDEDED",
-                            paddingBottom: "15px",
-                            marginTop: "16px",
-                          }}
-                        >
-                          <img
-                            style={{ width: "30px" }}
-                            src={item.icon}
-                            alt=""
-                          />
-                          <div
+                      infoRate.advantages.advantage_items.map(
+                        (item: any, index: string) => (
+                          <li
+                            key={index}
                             style={{
-                              fontWeight: "400",
-                              fontSize: "15px",
-                              lineHeight: "24px",
-                              marginLeft: "10px",
+                              display: "flex",
+                              alignItems: "center",
+                              borderBottom: "1px solid #EDEDED",
+                              paddingBottom: "15px",
+                              marginTop: "16px",
                             }}
                           >
-                            {item.text}
-                          </div>
-                        </li>
-                      ))}
+                            <img
+                              style={{ width: "30px" }}
+                              src={item.icon}
+                              alt=""
+                            />
+                            <div
+                              style={{
+                                fontWeight: "400",
+                                fontSize: "15px",
+                                lineHeight: "24px",
+                                marginLeft: "10px",
+                              }}
+                            >
+                              {item.text}
+                            </div>
+                          </li>
+                        )
+                      )}
                   </ul>
                 </div>
               </div>

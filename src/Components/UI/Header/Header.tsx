@@ -18,7 +18,7 @@ function Header() {
       <div className={style.navbar__wrapper}>
         <div className={style.navbar__Dopwrapper}>
           <div className={style.navbar__logo}>
-            <a href="">
+            <a href="#">
               <Logo style={{ width: "52px" }} />
             </a>
             <div className={style.navbar__burger}>

@@ -1,4 +1,4 @@
-import { Outlet, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "src/Components/UI/Header/Header";
 
 function Home() {

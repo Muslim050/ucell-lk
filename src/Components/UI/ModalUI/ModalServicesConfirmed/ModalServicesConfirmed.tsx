@@ -1,4 +1,3 @@
-import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as Close } from "../../../../assets/Close.svg";
 import { AnimatePresence } from "framer-motion";
 import { ReactComponent as Arrow } from "src/assets/PersonalArea/Arrow.svg";

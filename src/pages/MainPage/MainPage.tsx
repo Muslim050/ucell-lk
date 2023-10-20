@@ -5,7 +5,6 @@ import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
 import MsisdnCard from "src/Components/Main/MsisdnCard/MsisdnCard";
 import TariffPlanCard from "src/Components/Main/TariffPlanCard/TariffPlanCard";
 import ButtonsCard from "src/Components/Main/ButtonsCard/ButtonsCard";
-// import ModalInfoRate from 'src/Components/Main/ModalInfoRate/ModalInfoRate';
 import ActiveServicesCard from "src/Components/Main/ActiveServices/ActiveServicesCard";
 import ExpensesBanner from "src/Components/Main/ExpensesBanner/ExpensesBanner";
 import SharesBanner from "src/Components/Main/SharesBanner/SharesBanner";
@@ -18,13 +17,10 @@ import { PopupModalWrapper } from "src/Components/UI/ModalUI/SuccessPopupModal/P
 
 export const MainPage = () => {
   const dispatch = useAppDispatch();
-  const { mainscreen, status, fio } = useAppSelector(
-    (state) => state.mainscreen
-  );
+  const { mainscreen } = useAppSelector((state) => state.mainscreen);
 
   const [loading, setLoading] = React.useState(true);
   const tariff = mainscreen?.tariff;
-  const services = mainscreen?.services;
   const image = mainscreen?.carousel;
   const expenses = mainscreen?.expenses;
 

@@ -1,33 +1,20 @@
 import React from "react";
 import styles from "./ActiveServicesCard.module.scss";
-// import { Splide, SplideSlide } from 'src/splidejs/react-splide';
 import ProgressServices from "./ProgressServices";
-import { ServiceInterface } from "src/core/models/mainscreen.interface";
-// import { Splide, SplideSlide } from 'src/splidejs/react-splide';
-// import "src/splidejs/splide/dist/css/splide.min.css";
 import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
 import { fetchInfo } from "src/core/store/info/info.thunks";
-interface ActiveServicesCardProps {
-  service?: ServiceInterface;
-}
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-
-// Import Swiper styles
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 const ActiveServicesCard = () => {
   const dispatch = useAppDispatch();
-
-  const { mainscreen, status, fio } = useAppSelector(
-    (state) => state.mainscreen
-  );
-  const [loading, setLoading] = React.useState(true);
-
+  const { mainscreen } = useAppSelector((state) => state.mainscreen);
   const services = mainscreen?.services;
   React.useEffect(() => {
-    dispatch(fetchInfo()).then(() => setLoading(false));
+    dispatch(fetchInfo());
   }, [dispatch]);
   return (
     <>

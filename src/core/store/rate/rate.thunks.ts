@@ -1,21 +1,20 @@
-import axios from 'axios';
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import { useSelector } from 'react-redux';
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+import axios from "axios";
+import { createAsyncThunk } from "@reduxjs/toolkit";
+axios.defaults.headers.post["Content-Type"] = "application/json";
 
-export const fetchRate = createAsyncThunk('rate/fetchRate', async () => {
-  const token = localStorage.getItem('token');
+export const fetchRate = createAsyncThunk("rate/fetchRate", async () => {
+  const token = localStorage.getItem("token");
   try {
-    const response = await axios.get('/api/v1.5/rate_plans', {
+    const response = await axios.get("/api/v1.5/rate_plans", {
       headers: {
-        'Content-Type': 'application/json',
-        'X-User-Agent': 'ucell/android/1.4.3',
-        'X-Authorization': token,
-        'Accept-Language': 'ru'
+        "Content-Type": "application/json",
+        "X-User-Agent": "ucell/android/1.4.3",
+        "X-Authorization": token,
+        "Accept-Language": "ru",
       },
 
-      responseType: 'json',
-      data: JSON.stringify({})
+      responseType: "json",
+      data: JSON.stringify({}),
     });
 
     return response.data;
@@ -24,19 +23,19 @@ export const fetchRate = createAsyncThunk('rate/fetchRate', async () => {
   }
 });
 
-export const fetchMyRate = createAsyncThunk('rate/fetchMyRate', async () => {
-  const token = localStorage.getItem('token');
+export const fetchMyRate = createAsyncThunk("rate/fetchMyRate", async () => {
+  const token = localStorage.getItem("token");
   try {
-    const response = await axios.get('/api/v1.5/rate_plans/current', {
+    const response = await axios.get("/api/v1.5/rate_plans/current", {
       headers: {
-        'Content-Type': 'application/json',
-        'X-User-Agent': 'ucell/android/1.4.3',
-        'X-Authorization': token,
-        'Accept-Language': 'ru'
+        "Content-Type": "application/json",
+        "X-User-Agent": "ucell/android/1.4.3",
+        "X-Authorization": token,
+        "Accept-Language": "ru",
       },
 
-      responseType: 'json',
-      data: JSON.stringify({})
+      responseType: "json",
+      data: JSON.stringify({}),
     });
 
     return response.data;
@@ -46,24 +45,24 @@ export const fetchMyRate = createAsyncThunk('rate/fetchMyRate', async () => {
 });
 
 export const changeRate = createAsyncThunk(
-  'rate/changeRate',
+  "rate/changeRate",
   async (id: string) => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     try {
       const response = await axios.post(
-        '/api/v1.5/rate_plans/change',
+        "/api/v1.5/rate_plans/change",
         {
           // rate_plan_id: id
         },
         {
           headers: {
-            'Content-Type': 'application/json',
-            'X-User-Agent': 'ucell/android/1.4.3',
-            'X-Authorization': token,
-            'Accept-Language': 'ru'
+            "Content-Type": "application/json",
+            "X-User-Agent": "ucell/android/1.4.3",
+            "X-Authorization": token,
+            "Accept-Language": "ru",
           },
 
-          responseType: 'json'
+          responseType: "json",
           // data: JSON.stringify({})
         }
       );
@@ -77,23 +76,23 @@ export const changeRate = createAsyncThunk(
 );
 
 export const fetchDetailRate = createAsyncThunk(
-  'rate/fetchDetailRate',
+  "rate/fetchDetailRate",
   async ({ rateId }: { rateId: string | null }) => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     try {
       const response = await axios.post(
-        '/api/v1.5/rate_plans/change/initialize',
+        "/api/v1.5/rate_plans/change/initialize",
         { rate_plan_id: rateId },
         {
           headers: {
-            'Content-Type': 'application/json',
-            'X-User-Agent': 'ucell/android/1.4.3',
-            'X-Authorization': token,
-            'Accept-Language': 'ru'
-          }
+            "Content-Type": "application/json",
+            "X-User-Agent": "ucell/android/1.4.3",
+            "X-Authorization": token,
+            "Accept-Language": "ru",
+          },
         }
       );
-      console.log('response', response.data);
+      console.log("response", response.data);
 
       return response.data;
     } catch (error) {

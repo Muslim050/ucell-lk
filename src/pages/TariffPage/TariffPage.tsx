@@ -20,7 +20,6 @@ import MyMsisdnCard from "src/Components/Services/MyMsisdnCard/MyMsisdnCard";
 function ChangeTariffPage() {
   const dispatch = useAppDispatch();
   const rate = useAppSelector(({ rate }) => rate.rate);
-  const rateplans = useAppSelector(({ rate }) => rate.rate);
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
     dispatch(fetchRate()).then(() => setLoading(false));
@@ -102,7 +101,7 @@ function ChangeTariffPage() {
                 className="mySwiper"
               >
                 {rate &&
-                  rate.map((r, index) => (
+                  rate.map((r: any, index: string) => (
                     <SwiperSlide key={index}>
                       <CardRate key={index} rate={r} />
                     </SwiperSlide>

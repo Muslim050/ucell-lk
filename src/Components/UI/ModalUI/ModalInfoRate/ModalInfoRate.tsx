@@ -405,7 +405,8 @@ const ModalInfoRate = () => {
                 <button
                   className={styles.btn__disabled}
                   onClick={() => {
-                    dispatch(hideModalRestart()), dispatch(showModalRate());
+                    dispatch(hideModalRestart());
+                    dispatch(showModalRate());
                   }}
                 >
                   Нет

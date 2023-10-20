@@ -1,10 +1,8 @@
 import { CarouselItemInterface } from "src/core/models/mainscreen.interface";
 import React from "react";
-// import { Splide, SplideSlide } from '@splidejs/react-splide';
-// import '@splidejs/splide/dist/css/splide.min.css';
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";

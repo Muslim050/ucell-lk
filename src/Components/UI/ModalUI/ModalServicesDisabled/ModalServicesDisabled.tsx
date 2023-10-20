@@ -1,4 +1,3 @@
-import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as Close } from "../../../../assets/Close.svg";
 import { AnimatePresence } from "framer-motion";
 import { ReactComponent as Arrow } from "src/assets/PersonalArea/Arrow.svg";
@@ -45,10 +44,10 @@ export const ModalServicesDisabled = () => {
       setIsLoading(false);
       if (response.status === 200) {
         dispatch(hideModalDisabledServices());
-        dispatch(showPopUpModal("success"));
+        // dispatch(showPopUpModal("success"));
         return response.data;
       } else {
-        dispatch(showPopUpModal("error"));
+        // dispatch(showPopUpModal("error"));
       }
     } catch (error: any) {
       setIsLoading(false);

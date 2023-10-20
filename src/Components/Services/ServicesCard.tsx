@@ -6,7 +6,6 @@ import {
   showModalConfirmedServices,
   showModalDisabledServices,
 } from "src/core/store/modal/modal.slice";
-import { changeServices } from "src/core/store/services/services.thunks";
 
 interface ServicesCardProps {
   service?: ItemInterface;
