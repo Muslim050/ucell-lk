@@ -1,0 +1,277 @@
+.servicesInfo {
+  //   display: grid;
+  // grid-template-columns: repeat(4, 0fr);
+  // // grid-auto-rows: minmax(100px, auto);
+  // gap: 10px;
+  // justify-content: space-between;
+  display: grid;
+  // grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  // gap: 8px;
+  // justify-content: space-between;
+
+
+}
+
+
+
+
+
+
+
+.services {
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // gap: 8px;
+  // margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+.cardInfo {
+  width: 315px;
+  height: 100%;
+  min-height: 240px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+
+
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7220A3;
+    margin-top: 4px;
+  }
+
+
+  &__info {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #999999;
+  }
+
+  &__priceWrapper {
+    margin-top: 12px;
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+    background: #F5F7FA;
+    border-radius: 8px;
+    padding: 4px 8px 4px 6px;
+    display: initial;
+  }
+}
+
+
+.toggle_switch {
+  position: relative;
+  width: 40px;
+  height: 25px;
+
+  .active {
+    background-color: green;
+
+    /* или другие стили для активного состояния */
+  }
+
+  .inactive {
+    background-color: red;
+    /* или другие стили для неактивного состояния */
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    cursor: pointer;
+    /* Add default background color for both enabled and disabled states */
+    background-color: #ccc;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  /* Style for the enabled state */
+  .toggle_enabled {
+    background-color: #00B48C;
+
+    &::before {
+      transform: translateX(15px);
+    }
+  }
+}
+
+// .service_card {
+//   /* общие стили для карточки сервиса */
+//   height: 100%;
+// }
+
+// .active {
+//   background-color: green;
+
+//   /* или другие стили для активного состояния */
+// }
+
+// .inactive {
+//   background-color: red;
+//   /* или другие стили для неактивного состояния */
+// }
+
+
+@media (max-width: 1320px) {
+  .servicesInfo {
+    grid-template-columns: repeat(3, 3fr);
+    gap: 20px;
+
+  }
+
+  .cardInfo {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 990px) {
+  .servicesInfo {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 столбца на узких экранах */
+    gap: 20px;
+
+  }
+
+  .cardInfo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 670px) {
+  .servicesInfo {
+    grid-template-columns: repeat(1, 1fr);
+    /* 2 столбца на узких экранах */
+    gap: 20px;
+
+  }
+}
+
+
+.toggle {
+  width: 51px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.active {
+  background-color: #00B48C;
+
+}
+
+.active::after {
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+  right: 36px;
+
+}
+
+.inactive {
+  background-color: #EDEDED;
+}
+
+.inactive::before {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  height: 8px;
+  background: inherit;
+  right: 8px;
+  width: 8px;
+  border: 1px solid #b9b9b9;
+
+}
+
+
+/* Стили для "шарика" (переключателя) */
+.ball {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  transform: translateX(0);
+  /* Начальное значение, шарик в центре */
+}
+
+/* Стили для "шарика" (переключателя) в активном состоянии */
+.active .ball {
+  transform: translateX(100%);
+
+  /* Сдвигаем вправо на 100% ширины родительского элемента */
+}
+
+/* Стили для "шарика" (переключателя) в неактивном состоянии */
+.inactive .ball {
+  transform: translateX(3px);
+  /* Возвращаем в начальное положение (центр) */
+}

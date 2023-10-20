@@ -1,0 +1,223 @@
+.tariffplan {
+  margin-left: 5px;
+  border-radius: 20px;
+  padding: 16px;
+  width: 388px;
+  height: 267px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+
+  .tariffplanWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__wrapper_tp {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  &__tariffplanTitle {
+    font-size: 12px;
+    line-height: 28px;
+    color: #898989;
+  }
+
+  &__tariffplanName {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 13px;
+    color: #7220A3;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 1201px) {
+    .tariffplan__tariffplanName {
+      font-size: 16px;
+
+    }
+  }
+
+  &__wrapper_fio {
+    font-size: 15px;
+    line-height: 14px;
+    color: #898989;
+    text-align: center;
+  }
+}
+
+.limits {
+  display: flex;
+  justify-content: space-between;
+
+
+  &__wrapper {
+    // width: 100%;
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+
+
+
+
+  &__title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #333333;
+    margin-bottom: 4px;
+  }
+
+
+  &__limit__wrapper {
+    font-size: 12px;
+    display: flex;
+    color: #999999;
+    align-items: baseline;
+
+    .limits__initial {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #333333;
+      margin-right: 3px;
+    }
+
+    .limits__live {
+      font-size: 12px;
+      line-height: 14px;
+      color: #999999;
+      font-weight: 400;
+      margin-left: 3px;
+    }
+  }
+}
+
+
+// Advantages
+.imageUnlim {
+  height: 35px;
+  width: 124px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-image: url('../../../assets/PersonalArea/UnlimSocial.png');
+}
+
+.imageLimit {
+  margin-left: 5px;
+  height: 35px;
+  width: 124px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-image: url('../../../assets/PersonalArea/Limit.png');
+}
+
+.imageLifeZero {
+  margin-left: 5px;
+  height: 35px;
+  width: 124px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-image: url('../../../assets/PersonalArea/lifeZero.png');
+}
+
+// Advantages
+
+
+// subscriptionFee
+.subscriptionFee {
+  border-top: 1px solid #EDEDED;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #999999;
+  }
+
+  &__subscriptionW {
+    display: flex;
+  }
+
+
+  &__subscription {
+    margin-top: 2px;
+    font-size: 20px;
+    line-height: 18px;
+    color: #333333;
+    font-weight: 600;
+  }
+
+  &__subscriptionDate {
+    margin-top: 2px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #333333;
+    font-weight: 600;
+  }
+}
+
+// subscriptionFee
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .imageControl {
+    margin-left: 5px;
+    // object-fit: cover;
+    height: 35px;
+    width: 124px;
+    border-radius: 8px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-image: url('../../../assets/PersonalArea/control.png');
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .imageControl {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .tariffplan {
+    flex-grow: 1;
+  }
+}
+
+// 620
+@media screen and (max-width: 620px) {
+  .tariffplan {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+
+}

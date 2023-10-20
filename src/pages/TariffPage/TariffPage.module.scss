@@ -1,0 +1,67 @@
+.cardWrapper {
+  // grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  // gap: 20px;
+  width: 100%;
+}
+
+
+
+
+
+.btn__wrapper {
+  &__btn {
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background: #7220A3;
+    border: 0;
+    width: 100%;
+    border-radius: 30px;
+    padding: 9px 15px 9px 15px;
+    cursor: pointer;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.025);
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.20);
+
+
+    }
+  }
+}
+
+.splide__arrow {
+  bottom: 0 !important;
+}
+
+
+
+.wrapper__msisdn_rate {
+  display: flex;
+
+  .wrapper__msisd {
+    margin-bottom: 20px;
+
+  }
+
+  .wrapper__rate {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .wrapper__msisdn_rate {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .wrapper__rate {
+      margin: 0;
+    }
+  }
+
+
+
+}

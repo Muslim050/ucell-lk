@@ -1,0 +1,36 @@
+@import "src/styles/index.scss";
+
+.BannerAppCard {
+  border-radius: 20px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5px;
+
+  .BannerAppCardWrapper {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: 267px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 80%;
+    background-position-y: 50%;
+    background-image: url('../../../assets/PersonalArea/МЛК.png');
+  }
+
+
+}
+
+@media screen and (max-width: 980px) {
+  .BannerAppCard {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .BannerAppCard {
+    width: 400px;
+  }
+}

@@ -1,0 +1,25 @@
+.expensesBanner {
+
+  border-radius: 20px;
+  padding: 20px;
+  height: 580px;
+
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 620px) {
+
+  .expensesBanner {
+    margin-right: 0;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expensesBanner {
+    margin-right: 0;
+
+  }
+}
