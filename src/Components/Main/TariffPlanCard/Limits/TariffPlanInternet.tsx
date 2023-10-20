@@ -1,7 +1,7 @@
-import { TariffInterface } from '@core/models/mainscreen.interface';
-import React from 'react';
-import styles from '../TariffPlanCard.module.scss';
-import ProgressBar from '../../../UI/ProgressBar/ProgressBar';
+import { TariffInterface } from "src/core/models/mainscreen.interface";
+import React from "react";
+import styles from "../TariffPlanCard.module.scss";
+import ProgressBar from "../../../UI/ProgressBar/ProgressBar";
 
 interface TariffPlanCardProps {
   tariff?: TariffInterface;

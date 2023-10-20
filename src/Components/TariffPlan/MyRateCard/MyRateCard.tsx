@@ -132,7 +132,7 @@ const MyRateCard = () => {
                   }}
                 >
                   {infoMyRate &&
-                    infoMyRate.counters.map((item, index) => (
+                    infoMyRate.counters.map((item: any, index: number) => (
                       <div
                         key={index}
                         style={{

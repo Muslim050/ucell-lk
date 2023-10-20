@@ -1,11 +1,11 @@
-import React from 'react';
-import styles from './TariffPlanCard.module.scss';
-import { TariffInterface } from '@core/models/mainscreen.interface';
-import TariffPlanFooter from './TariffPlanFooter';
-import TariffPlanAdvantages from './TariffPlanAdvantages';
-import TariffPlanVoice from './Limits/TariffPlanVoice';
-import TariffPlanInternet from './Limits/TariffPlanInternet';
-import TariffPlanSms from './Limits/TariffPlanSms';
+import React from "react";
+import styles from "./TariffPlanCard.module.scss";
+import { TariffInterface } from "src/core/models/mainscreen.interface";
+import TariffPlanFooter from "./TariffPlanFooter";
+import TariffPlanAdvantages from "./TariffPlanAdvantages";
+import TariffPlanVoice from "./Limits/TariffPlanVoice";
+import TariffPlanInternet from "./Limits/TariffPlanInternet";
+import TariffPlanSms from "./Limits/TariffPlanSms";
 
 interface TariffPlanCardProps {
   tariff?: TariffInterface;

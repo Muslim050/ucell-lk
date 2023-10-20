@@ -103,7 +103,7 @@ function ChangeServicesPage() {
 
             <div style={{ display: "flex", overflow: "auto" }}>
               {activeTab === "all" &&
-                services?.all?.map((category, categoryIndex) => (
+                services?.all?.map((category: any, categoryIndex: number) => (
                   <div key={categoryIndex}>
                     <div className={styles.tab}>
                       <ul className={styles.inline}>
@@ -125,22 +125,22 @@ function ChangeServicesPage() {
             <div className={styles.servicesInfo}>
               {activeCategory !== null
                 ? services?.all?.map(
-                    (category, categoryIndex) =>
+                    (category: any, categoryIndex: number) =>
                       category.name === activeCategory &&
-                      category.items?.map((item, itemIndex) => (
+                      category.items?.map((item: any, itemIndex: number) => (
                         <ServicesCardInfo key={itemIndex} item={item} />
                       ))
                   )
                 : services &&
-                  services?.all?.map((category, categoryIndex) =>
-                    category.items?.map((item, itemIndex) => (
+                  services?.all?.map((category: any, categoryIndex: number) =>
+                    category.items?.map((item: any, itemIndex: number) => (
                       <ServicesCardInfo key={itemIndex} item={item} />
                     ))
                   )}
 
               {activeCategory === "enabled" &&
-                services?.enabled?.map((category, categoryIndex) =>
-                  category.items?.map((item, itemIndex) => (
+                services?.enabled?.map((category: any, categoryIndex: number) =>
+                  category.items?.map((item: any, itemIndex: number) => (
                     <ServicesCardInfo key={itemIndex} item={item} />
                   ))
                 )}

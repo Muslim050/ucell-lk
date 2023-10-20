@@ -123,7 +123,7 @@ export const ModalDetailing = () => {
   };
   React.useEffect(() => {
     dispatch(getExpensesReport());
-  }, []);
+  }, [dispatch]);
   const currentDate = new Date();
 
   const isDateDisabled = (date: Date) => {
@@ -242,7 +242,7 @@ export const ModalDetailing = () => {
                 <div style={{ marginTop: "20px" }}>
                   <p style={{ marginBottom: "18px" }}>Последние отчеты</p>
 
-                  {getExpRep?.map((item: any, index: string) => {
+                  {getExpRep?.map((item: any, index: number) => {
                     return (
                       <div key={index} className={style.expenses_download}>
                         <div style={{ display: "flex", alignItems: "center" }}>

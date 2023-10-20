@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './TariffPlanCard.module.scss';
-import { TariffInterface } from '@core/models/mainscreen.interface';
+import React from "react";
+import styles from "./TariffPlanCard.module.scss";
+import { TariffInterface } from "src/core/models/mainscreen.interface";
 
 interface TariffPlanCardProps {
   tariff?: TariffInterface;

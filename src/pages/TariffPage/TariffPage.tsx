@@ -101,7 +101,7 @@ function ChangeTariffPage() {
                 className="mySwiper"
               >
                 {rate &&
-                  rate.map((r: any, index: string) => (
+                  rate.map((r: any, index: number) => (
                     <SwiperSlide key={index}>
                       <CardRate key={index} rate={r} />
                     </SwiperSlide>

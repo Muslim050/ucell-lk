@@ -42,7 +42,7 @@ const ActiveServicesCard = () => {
           >
             <>
               {services &&
-                services.map((service: any, index: string) => (
+                services.map((service: any, index: number) => (
                   <div
                     key={index}
                     style={{

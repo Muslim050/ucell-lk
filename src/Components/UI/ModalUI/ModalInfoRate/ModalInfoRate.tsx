@@ -168,7 +168,7 @@ const ModalInfoRate = () => {
                   </li>
 
                   {infoMyRate &&
-                    infoMyRate.counters.map((item: any, index: string) => (
+                    infoMyRate.counters.map((item: any, index: number) => (
                       <li
                         key={index}
                         style={{
@@ -297,7 +297,7 @@ const ModalInfoRate = () => {
 
                     {infoMyRate &&
                       infoMyRate.rate_plan.advantages.advantage_items.map(
-                        (item: any, index: string) => (
+                        (item: any, index: number) => (
                           <li
                             key={index}
                             style={{

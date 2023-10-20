@@ -1,13 +1,13 @@
-import styles from './MyMsisdnCard.module.scss';
-import { ReactComponent as Present } from '@assets/present.svg';
-import { ReactComponent as Plus } from '@assets/Plus.svg';
-import { useDispatch } from 'react-redux';
+import styles from "./MyMsisdnCard.module.scss";
+import { ReactComponent as Present } from "@assets/present.svg";
+import { ReactComponent as Plus } from "@assets/Plus.svg";
+import { useDispatch } from "react-redux";
 // import { showModalPayment } from '@core/store/modal/modal.slice';
-import { useAppDispatch, useAppSelector } from '@core/utils/hooks/redux';
-import { showModalPayment } from '@core/store/modal/modal.slice';
-import FormatterView from 'Components/UI/Formatter/FormatterView';
-import { fetchFIO, fetchInfo } from '@core/store/info/info.thunks';
-import React from 'react';
+import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
+import { showModalPayment } from "src/core/store/modal/modal.slice";
+import FormatterView from "src/Components/UI/Formatter/FormatterView";
+import { fetchFIO, fetchInfo } from "src/core/store/info/info.thunks";
+import React from "react";
 
 function MyMsisdnCard() {
   const dispatch = useAppDispatch();
@@ -35,9 +35,9 @@ function MyMsisdnCard() {
             <div>
               <div
                 style={{
-                  fontSize: '10px',
-                  lineHeight: '12px',
-                  color: '#898989'
+                  fontSize: "10px",
+                  lineHeight: "12px",
+                  color: "#898989",
                 }}
               >
                 Баланс
@@ -47,7 +47,7 @@ function MyMsisdnCard() {
                   {/* {+balance.balance.toString().slice(0, -2).toLocaleString()} */}
                   {/* {balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} */}
                   <FormatterView data={balance.balance} />
-                  <span style={{ fontSize: '12px', lineHeight: '14px' }}>
+                  <span style={{ fontSize: "12px", lineHeight: "14px" }}>
                     сум
                   </span>
                 </div>
@@ -60,7 +60,7 @@ function MyMsisdnCard() {
                   dispatch(showModalPayment());
                 }}
               >
-                <Plus style={{ marginRight: '7px' }} />
+                <Plus style={{ marginRight: "7px" }} />
                 Пополнить
               </button>
             </div>

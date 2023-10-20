@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
   Legend,
-  ChartOptions
-} from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
-import { ExpenseCategoryInterface } from '@core/models/mainscreen.interface';
-import FormatterView from '../../UI/Formatter/FormatterView';
+  ChartOptions,
+} from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+import { ExpenseCategoryInterface } from "src/core/models/mainscreen.interface";
+import FormatterView from "../../UI/Formatter/FormatterView";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 interface ProgressProps {
@@ -26,25 +26,25 @@ const Progress: React.FC<ProgressProps> = ({ categories }) => {
         data: categories.map((category) => category.total),
         backgroundColor: categories.map((category) => category.color),
         borderRadius: 2,
-        borderWidth: 2
-      }
-    ]
+        borderWidth: 2,
+      },
+    ],
   };
-  const chartOptions: ChartOptions<'doughnut'> = {
+  const chartOptions: ChartOptions<"doughnut"> = {
     plugins: {
-      legend: { display: false }
+      legend: { display: false },
     },
-    cutout: '75%'
+    cutout: "75%",
   };
 
   return (
     <>
       <div
         style={{
-          width: '160px',
-          display: 'flex',
-          justifyContent: 'center',
-          margin: '30px auto'
+          width: "160px",
+          display: "flex",
+          justifyContent: "center",
+          margin: "30px auto",
         }}
       >
         <Doughnut data={chartData} options={chartOptions} />
@@ -54,26 +54,26 @@ const Progress: React.FC<ProgressProps> = ({ categories }) => {
           <div
             key={category.name}
             style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              marginBottom: '15px'
+              display: "flex",
+              justifyContent: "space-between",
+              marginBottom: "15px",
             }}
           >
-            <span style={{ display: 'flex' }}>
+            <span style={{ display: "flex" }}>
               <div
                 style={{
                   background: category.color,
-                  width: '16px',
-                  height: '16px',
-                  borderRadius: '20px',
-                  marginRight: '10px'
+                  width: "16px",
+                  height: "16px",
+                  borderRadius: "20px",
+                  marginRight: "10px",
                 }}
               ></div>
-              <div style={{ fontSize: '15px', color: '#333' }}></div>
+              <div style={{ fontSize: "15px", color: "#333" }}></div>
               {category.name}:
             </span>
-            <span style={{ display: 'flex', fontSize: '15px' }}>
-              {category.total ? <FormatterView data={category.total} /> : 0}{' '}
+            <span style={{ display: "flex", fontSize: "15px" }}>
+              {category.total ? <FormatterView data={category.total} /> : 0}{" "}
               &nbsp;сум
             </span>
           </div>

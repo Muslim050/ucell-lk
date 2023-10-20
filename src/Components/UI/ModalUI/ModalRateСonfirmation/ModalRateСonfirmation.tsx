@@ -9,10 +9,10 @@ import DropdownUI from "../../Dropdown/DropdownUI";
 import {
   hideModalRateConfirm,
   showModalRateСonfirmation,
-  showPopUpModal,
+  // showPopUpModal,
 } from "src/core/store/modal/modal.slice";
 import { useAppDispatch, useAppSelector } from "src/core/utils/hooks/redux";
-import { changeRate } from "src/core/store/rate/rate.thunks";
+// import { changeRate } from "src/core/store/rate/rate.thunks";
 
 const ModalRateСonfirmation = () => {
   const dispatch = useAppDispatch();
@@ -107,7 +107,7 @@ const ModalRateСonfirmation = () => {
 
                   {infoRate &&
                     infoRate.included_traffic.map(
-                      (item: any, index: string) => (
+                      (item: any, index: number) => (
                         <li
                           key={index}
                           style={{
@@ -230,7 +230,7 @@ const ModalRateСonfirmation = () => {
 
                     {infoRate &&
                       infoRate.advantages.advantage_items.map(
-                        (item: any, index: string) => (
+                        (item: any, index: number) => (
                           <li
                             key={index}
                             style={{

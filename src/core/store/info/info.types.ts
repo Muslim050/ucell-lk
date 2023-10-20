@@ -1,4 +1,4 @@
-import { IMainScreen } from '@core/models/mainscreen.interface';
+import { IMainScreen } from "src/core/models/mainscreen.interface";
 
 export interface MainscreenState {
   status: string;

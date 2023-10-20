@@ -19,6 +19,7 @@ interface ModalState {
   servicesInfo: ItemInterface | null;
   status: string | null;
   rateId: string;
+  message: string;
 }
 
 const initialState: ModalState = {
@@ -36,6 +37,7 @@ const initialState: ModalState = {
   rateId: "",
   servicesInfo: null,
   status: null,
+  message: "",
 };
 
 export const modalSlice = createSlice({

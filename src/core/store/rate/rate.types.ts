@@ -1,8 +1,8 @@
 import {
   DetailRateInterface,
   MyRateInterface,
-  RateInterface
-} from '@core/models/rate.interface';
+  RateInterface,
+} from "src/core/models/rate.interface";
 
 export interface RateState {
   rate: RateInterface[] | null;
