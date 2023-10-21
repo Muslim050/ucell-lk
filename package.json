@@ -19,7 +19,6 @@
     "chart.js": "^4.4.0",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
-    "http-proxy-middleware": "^2.0.6",
     "i18next": "^23.6.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",

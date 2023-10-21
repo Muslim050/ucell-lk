@@ -25,7 +25,7 @@ function Login() {
   const handleMsisdn = async () => {
     try {
       await axios.post(
-        "/api/v1.5/auth/otp/request",
+        "https://api-ma.ucell.uz/api/v1.5/auth/otp/request",
         {
           msisdn,
         },
@@ -49,7 +49,7 @@ function Login() {
   const handleOTP = async () => {
     try {
       const { data } = await axios.post(
-        "/api/v1.5/auth/otp/verify",
+        "https://api-ma.ucell.uz/api/v1.5/auth/otp/verify",
         { msisdn, code },
         {
           headers: {
