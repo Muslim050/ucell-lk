@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/ucell-lk/static/css/main.a4d07501.css",
+    "main.js": "/ucell-lk/static/js/main.ec917d81.js",
+    "static/media/МЛК.png": "/ucell-lk/static/media/МЛК.cad1c4e7e1d26d9d4e6d.png",
+    "static/media/Setting.png": "/ucell-lk/static/media/Setting.d9547d187521a1e082e7.png",
+    "static/media/Check.png": "/ucell-lk/static/media/Check.71ab5080bfcdcfedc477.png",
+    "static/media/Location.png": "/ucell-lk/static/media/Location.93419306efa9a87e0a1d.png",
+    "static/media/Alarm.png": "/ucell-lk/static/media/Alarm.ae060916527b78a9ef9e.png",
+    "static/media/Services.svg": "/ucell-lk/static/media/Services.4e601fdec2eb1e82865523b130a49b3a.svg",
+    "static/media/ChangeTarif.svg": "/ucell-lk/static/media/ChangeTarif.13f8843e310c661a76e897877fd75567.svg",
+    "static/media/DownloadReport.svg": "/ucell-lk/static/media/DownloadReport.ce409c392a42117598f35cbc22201e4b.svg",
+    "static/media/logo.svg": "/ucell-lk/static/media/logo.dfb27d28b6b79e6b7671fe21e36cdbd9.svg",
+    "static/media/Infinity.svg": "/ucell-lk/static/media/Infinity.bddf022f91233b98a15db34afcb68206.svg",
+    "static/media/Quit.svg": "/ucell-lk/static/media/Quit.bb357048529309e4c3f19ed16d5ebca4.svg",
+    "static/media/Close.svg": "/ucell-lk/static/media/Close.d9eaf61c6e5f53325f2054ae02e3df14.svg",
+    "static/media/Detailing.svg": "/ucell-lk/static/media/Detailing.5be35249f2b10ecc3c4382ad256b7ac8.svg",
+    "static/media/Detalisation.svg": "/ucell-lk/static/media/Detalisation.2eaf280e07646290747557a431de45c5.svg",
+    "static/media/BackArrow.svg": "/ucell-lk/static/media/BackArrow.b4ed8b435fd08d6c9eef33f4a6b5021d.svg",
+    "index.html": "/ucell-lk/index.html",
+    "static/media/Arrow.svg": "/ucell-lk/static/media/Arrow.ea169d1c0e204971b700d1171da18dee.svg",
+    "static/media/ChangeTarifArrow.svg": "/ucell-lk/static/media/ChangeTarifArrow.fba276994d30f2538c8564770ef78ba2.svg",
+    "static/media/MyPhone.svg": "/ucell-lk/static/media/MyPhone.748af5fe6f8b56fc0e3cdb087fd345cd.svg",
+    "static/media/Arrow2.svg": "/ucell-lk/static/media/Arrow2.8276143a9628029a5fa7de061b73b96e.svg",
+    "static/media/Menu.svg": "/ucell-lk/static/media/Menu.f2224e9027a0229051635c850ed60cb0.svg",
+    "static/media/Phone.svg": "/ucell-lk/static/media/Phone.796c9aefa57ca374aef6c6beeddb0fb7.svg",
+    "static/media/Plus.svg": "/ucell-lk/static/media/Plus.e0f7215296b9b81dd079f49c96783762.svg",
+    "static/media/Dropdown.svg": "/ucell-lk/static/media/Dropdown.c521c3867c04ddaf25028031686e87e6.svg",
+    "main.a4d07501.css.map": "/ucell-lk/static/css/main.a4d07501.css.map",
+    "main.ec917d81.js.map": "/ucell-lk/static/js/main.ec917d81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4d07501.css",
+    "static/js/main.ec917d81.js"
+  ]
+}
