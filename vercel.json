@@ -1,12 +1,12 @@
 {
   "routes": [
     {
-      "src": "/api/(.*)", 
-      "dest": "https://api-ma.ucell.uz/"
+      "src": "^/api/(.*)",
+      "dest": "https://api-ma.ucell.uz/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "index.html"
     }
   ]
 }
